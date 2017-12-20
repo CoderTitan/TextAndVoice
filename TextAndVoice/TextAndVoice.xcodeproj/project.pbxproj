@@ -13,6 +13,15 @@
 		47E87A6D1FE7BA30006DF756 /* TextAndVoice.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 47E87A6B1FE7BA30006DF756 /* TextAndVoice.xcdatamodeld */; };
 		47E87A6F1FE7BA30006DF756 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E87A6E1FE7BA30006DF756 /* Assets.xcassets */; };
 		47E87A721FE7BA30006DF756 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E87A701FE7BA30006DF756 /* LaunchScreen.storyboard */; };
+		47E87A7D1FE7C03E006DF756 /* TextToVoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E87A7B1FE7C03E006DF756 /* TextToVoiceController.swift */; };
+		47E87A7E1FE7C03E006DF756 /* TextToVoiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E87A7C1FE7C03E006DF756 /* TextToVoiceController.xib */; };
+		47E87A811FE7C050006DF756 /* VoiceToTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E87A7F1FE7C050006DF756 /* VoiceToTextController.swift */; };
+		47E87A821FE7C050006DF756 /* VoiceToTextController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E87A801FE7C050006DF756 /* VoiceToTextController.xib */; };
+		47E87AAB1FEA2ADE006DF756 /* LocalVoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E87AA91FEA2ADE006DF756 /* LocalVoiceController.swift */; };
+		47E87AAC1FEA2ADE006DF756 /* LocalVoiceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E87AAA1FEA2ADE006DF756 /* LocalVoiceController.xib */; };
+		47E87AAF1FEA30BA006DF756 /* RealDataRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E87AAD1FEA30BA006DF756 /* RealDataRecordController.swift */; };
+		47E87AB01FEA30BA006DF756 /* RealDataRecordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E87AAE1FEA30BA006DF756 /* RealDataRecordController.xib */; };
+		47E87AB41FEA4097006DF756 /* 再别康桥.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 47E87AB31FEA4097006DF756 /* 再别康桥.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		47E87A6E1FE7BA30006DF756 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47E87A711FE7BA30006DF756 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47E87A731FE7BA30006DF756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E87A7B1FE7C03E006DF756 /* TextToVoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToVoiceController.swift; sourceTree = "<group>"; };
+		47E87A7C1FE7C03E006DF756 /* TextToVoiceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextToVoiceController.xib; sourceTree = "<group>"; };
+		47E87A7F1FE7C050006DF756 /* VoiceToTextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceToTextController.swift; sourceTree = "<group>"; };
+		47E87A801FE7C050006DF756 /* VoiceToTextController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoiceToTextController.xib; sourceTree = "<group>"; };
+		47E87AA91FEA2ADE006DF756 /* LocalVoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalVoiceController.swift; sourceTree = "<group>"; };
+		47E87AAA1FEA2ADE006DF756 /* LocalVoiceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocalVoiceController.xib; sourceTree = "<group>"; };
+		47E87AAD1FEA30BA006DF756 /* RealDataRecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDataRecordController.swift; sourceTree = "<group>"; };
+		47E87AAE1FEA30BA006DF756 /* RealDataRecordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealDataRecordController.xib; sourceTree = "<group>"; };
+		47E87AB31FEA4097006DF756 /* 再别康桥.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "再别康桥.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,56 @@
 		47E87A631FE7BA30006DF756 /* TextAndVoice */ = {
 			isa = PBXGroup;
 			children = (
+				47E87AA81FEA2AA7006DF756 /* 本地语音转换文本 */,
+				47E87AA71FEA2AA7006DF756 /* 实时语音转换文本 */,
+				47E87A791FE7C01A006DF756 /* 文字转语音 */,
+				47E87A7A1FE7C01A006DF756 /* 语音转文字 */,
 				47E87A641FE7BA30006DF756 /* AppDelegate.swift */,
 				47E87A661FE7BA30006DF756 /* ViewController.swift */,
 				47E87A681FE7BA30006DF756 /* Main.storyboard */,
 				47E87A6E1FE7BA30006DF756 /* Assets.xcassets */,
 				47E87A701FE7BA30006DF756 /* LaunchScreen.storyboard */,
+				47E87AB31FEA4097006DF756 /* 再别康桥.mp3 */,
 				47E87A731FE7BA30006DF756 /* Info.plist */,
 				47E87A6B1FE7BA30006DF756 /* TextAndVoice.xcdatamodeld */,
 			);
 			path = TextAndVoice;
+			sourceTree = "<group>";
+		};
+		47E87A791FE7C01A006DF756 /* 文字转语音 */ = {
+			isa = PBXGroup;
+			children = (
+				47E87A7B1FE7C03E006DF756 /* TextToVoiceController.swift */,
+				47E87A7C1FE7C03E006DF756 /* TextToVoiceController.xib */,
+			);
+			path = "文字转语音";
+			sourceTree = "<group>";
+		};
+		47E87A7A1FE7C01A006DF756 /* 语音转文字 */ = {
+			isa = PBXGroup;
+			children = (
+				47E87A7F1FE7C050006DF756 /* VoiceToTextController.swift */,
+				47E87A801FE7C050006DF756 /* VoiceToTextController.xib */,
+			);
+			path = "语音转文字";
+			sourceTree = "<group>";
+		};
+		47E87AA71FEA2AA7006DF756 /* 实时语音转换文本 */ = {
+			isa = PBXGroup;
+			children = (
+				47E87AAD1FEA30BA006DF756 /* RealDataRecordController.swift */,
+				47E87AAE1FEA30BA006DF756 /* RealDataRecordController.xib */,
+			);
+			path = "实时语音转换文本";
+			sourceTree = "<group>";
+		};
+		47E87AA81FEA2AA7006DF756 /* 本地语音转换文本 */ = {
+			isa = PBXGroup;
+			children = (
+				47E87AA91FEA2ADE006DF756 /* LocalVoiceController.swift */,
+				47E87AAA1FEA2ADE006DF756 /* LocalVoiceController.xib */,
+			);
+			path = "本地语音转换文本";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +185,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E87AAC1FEA2ADE006DF756 /* LocalVoiceController.xib in Resources */,
+				47E87A7E1FE7C03E006DF756 /* TextToVoiceController.xib in Resources */,
 				47E87A721FE7BA30006DF756 /* LaunchScreen.storyboard in Resources */,
+				47E87AB41FEA4097006DF756 /* 再别康桥.mp3 in Resources */,
+				47E87A821FE7C050006DF756 /* VoiceToTextController.xib in Resources */,
+				47E87AB01FEA30BA006DF756 /* RealDataRecordController.xib in Resources */,
 				47E87A6F1FE7BA30006DF756 /* Assets.xcassets in Resources */,
 				47E87A6A1FE7BA30006DF756 /* Main.storyboard in Resources */,
 			);
@@ -139,6 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E87AAF1FEA30BA006DF756 /* RealDataRecordController.swift in Sources */,
+				47E87AAB1FEA2ADE006DF756 /* LocalVoiceController.swift in Sources */,
+				47E87A7D1FE7C03E006DF756 /* TextToVoiceController.swift in Sources */,
+				47E87A811FE7C050006DF756 /* VoiceToTextController.swift in Sources */,
 				47E87A671FE7BA30006DF756 /* ViewController.swift in Sources */,
 				47E87A6D1FE7BA30006DF756 /* TextAndVoice.xcdatamodeld in Sources */,
 				47E87A651FE7BA30006DF756 /* AppDelegate.swift in Sources */,
@@ -279,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3HG8J7L5X5;
 				INFOPLIST_FILE = TextAndVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.TextAndVoice";
@@ -293,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3HG8J7L5X5;
 				INFOPLIST_FILE = TextAndVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.TextAndVoice";

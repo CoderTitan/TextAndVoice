@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextToVoiceController" customModule="TextAndVoice" customModuleProvider="target">
+            <connections>
+                <outlet property="pauseButton" destination="Pbw-oY-Rr9" id="5HS-Uv-lLm"/>
+                <outlet property="startButton" destination="esV-gr-0CO" id="QeE-fS-Obm"/>
+                <outlet property="textView" destination="Cq9-86-cxU" id="Wql-hw-do0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="willSpeekLabel" destination="NYy-Re-0gW" id="fnY-wu-WqV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cq9-86-cxU">
+                    <rect key="frame" x="30" y="125" width="315" height="150"/>
+                    <color key="backgroundColor" red="0.76123882097199347" green="0.98224833639999998" blue="0.94709867726199159" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="CuU-5N-SzX"/>
+                    </constraints>
+                    <string key="text">谈到语音和文本的转换, 就要说到语音转文本和文本转语音两大技术,
+文本转语音是iOS7以后的技术, 用到的是AVFoundation框架,
+语音转文本是iOS10以后, 苹果发布的一个Speech框架,
+下面先介绍一下简单的文本转语音</string>
+                    <color key="textColor" red="0.064161542577639896" green="0.3938269430965724" blue="0.93549042940139771" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请在以下输入框中输入文字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEz-qo-ooz">
+                    <rect key="frame" x="30" y="70" width="315" height="25"/>
+                    <color key="backgroundColor" red="0.29179194135862374" green="0.36079600763175812" blue="0.96424621343612671" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="cc6-yD-z5Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esV-gr-0CO">
+                    <rect key="frame" x="30" y="305" width="315" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="开始播放">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="translationAction:" destination="-1" eventType="touchUpInside" id="vQp-wn-qX5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbw-oY-Rr9">
+                    <rect key="frame" x="30" y="355" width="315" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="暂停播放">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="pauseOrContinueAction:" destination="-1" eventType="touchUpInside" id="Uy1-im-hNA"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将要播放的文本" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYy-Re-0gW">
+                    <rect key="frame" x="30" y="415" width="315" height="25"/>
+                    <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="SLR-9a-c1x"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Pbw-oY-Rr9" firstAttribute="top" secondItem="esV-gr-0CO" secondAttribute="bottom" constant="20" id="9us-9u-u39"/>
+                <constraint firstItem="YEz-qo-ooz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="BVq-TG-N02"/>
+                <constraint firstItem="YEz-qo-ooz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Cri-o4-PJ9"/>
+                <constraint firstItem="YEz-qo-ooz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HcC-jB-GU9"/>
+                <constraint firstItem="esV-gr-0CO" firstAttribute="top" secondItem="Cq9-86-cxU" secondAttribute="bottom" constant="30" id="LUp-Z2-eie"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Cq9-86-cxU" secondAttribute="trailing" constant="30" id="ShV-LD-JxF"/>
+                <constraint firstItem="esV-gr-0CO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Xyy-Yn-F2K"/>
+                <constraint firstItem="Cq9-86-cxU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="eqB-0F-eJc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YEz-qo-ooz" secondAttribute="trailing" constant="30" id="gUO-Ct-dxh"/>
+                <constraint firstItem="NYy-Re-0gW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="hww-Ng-354"/>
+                <constraint firstItem="NYy-Re-0gW" firstAttribute="top" secondItem="Pbw-oY-Rr9" secondAttribute="bottom" constant="30" id="mTg-qv-qVf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NYy-Re-0gW" secondAttribute="trailing" constant="30" id="oCW-6j-FlC"/>
+                <constraint firstItem="Pbw-oY-Rr9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="p8u-pQ-WJ7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pbw-oY-Rr9" secondAttribute="trailing" constant="30" id="rJb-K3-bHM"/>
+                <constraint firstItem="Cq9-86-cxU" firstAttribute="top" secondItem="YEz-qo-ooz" secondAttribute="bottom" constant="30" id="rc4-wQ-tb9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="esV-gr-0CO" secondAttribute="trailing" constant="30" id="vgM-iD-zv7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
