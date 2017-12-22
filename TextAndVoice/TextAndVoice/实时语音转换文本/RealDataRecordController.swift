@@ -60,7 +60,7 @@ extension RealDataRecordController{
             print("Throws：\(error)")
         }
         
-        //
+        //3. 创建识别请求
         recordRequest = SFSpeechAudioBufferRecognitionRequest()
         
         let inputNode = audioEngine.inputNode
