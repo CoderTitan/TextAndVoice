@@ -12,7 +12,7 @@ import AVFoundation
 
 class RealDataRecordController: UIViewController {
 
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var textLabel: UITextView!
     @IBOutlet weak var recordBtn: UIButton!
     fileprivate var recordRequest: SFSpeechAudioBufferRecognitionRequest?
     fileprivate var recordTask: SFSpeechRecognitionTask?
@@ -39,6 +39,11 @@ class RealDataRecordController: UIViewController {
         let isStart = sender.currentTitle!.contains("开始")
         recordBtn.setTitle(isStart ? "停止录音" : "开始录音", for: .normal)
         isStart ? startRecognize() : stopRecognize()
+    }
+    
+    @IBAction func labelCopClick(_ sender: Any) {
+        let pause = UIPasteboard.general
+        pause.string = textLabel.text
     }
 }
 

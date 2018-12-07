@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocalVoiceController" customModule="TextAndVoice" customModuleProvider="target">
             <connections>
                 <outlet property="recordButton" destination="rqE-Bb-znj" id="XJy-gn-IMh"/>
-                <outlet property="textLabel" destination="BAR-d4-FdL" id="yzb-Ze-hs9"/>
+                <outlet property="textLabel" destination="mSJ-WX-EIR" id="iJW-Mc-v4I"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,16 +32,6 @@
                         <action selector="recogedAction:" destination="-1" eventType="touchUpInside" id="84C-lk-8sx"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAR-d4-FdL">
-                    <rect key="frame" x="30" y="133.5" width="315" height="400"/>
-                    <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="2Wx-Qi-cvK"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="识别出的文字将在下面展示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7U-fK-L32">
                     <rect key="frame" x="30" y="50" width="315" height="19.5"/>
                     <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,21 +39,44 @@
                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mSJ-WX-EIR">
+                    <rect key="frame" x="20" y="109.5" width="335" height="414.5"/>
+                    <color key="backgroundColor" red="1" green="0.62840389460000001" blue="0.021082708429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt6-f1-XQE">
+                    <rect key="frame" x="87.5" y="554" width="200" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Ijo-o0-uVn"/>
+                    </constraints>
+                    <state key="normal" title="复制">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="labelCopClick:" destination="-1" eventType="touchUpInside" id="ecD-CV-6ex"/>
+                        <action selector="recogedAction:" destination="-1" eventType="touchUpInside" id="ZoV-WV-ODQ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rqE-Bb-znj" secondAttribute="trailing" constant="30" id="8iW-tZ-YPR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H7U-fK-L32" secondAttribute="trailing" constant="30" id="8x1-hX-r9D"/>
+                <constraint firstItem="mSJ-WX-EIR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Hy0-CP-rdX"/>
+                <constraint firstItem="Bt6-f1-XQE" firstAttribute="centerX" secondItem="rqE-Bb-znj" secondAttribute="centerX" id="MgD-yQ-lxy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mSJ-WX-EIR" secondAttribute="trailing" constant="20" id="QAy-TW-Ol1"/>
                 <constraint firstItem="rqE-Bb-znj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Rqs-yx-5Te"/>
-                <constraint firstItem="BAR-d4-FdL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WkD-hq-KZr"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="BAR-d4-FdL" secondAttribute="trailing" constant="30" id="cKW-Lz-2l9"/>
+                <constraint firstItem="rqE-Bb-znj" firstAttribute="top" secondItem="Bt6-f1-XQE" secondAttribute="bottom" constant="19" id="SaV-KK-hS3"/>
+                <constraint firstItem="mSJ-WX-EIR" firstAttribute="top" secondItem="H7U-fK-L32" secondAttribute="bottom" constant="40" id="dH6-vU-nLw"/>
                 <constraint firstItem="H7U-fK-L32" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="fpW-NR-Ld7"/>
-                <constraint firstItem="BAR-d4-FdL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="g2p-Du-TKL"/>
-                <constraint firstItem="BAR-d4-FdL" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pO6-YR-J10"/>
+                <constraint firstItem="Bt6-f1-XQE" firstAttribute="top" secondItem="mSJ-WX-EIR" secondAttribute="bottom" constant="30" id="meq-dg-cVO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rqE-Bb-znj" secondAttribute="bottom" constant="34" id="vBY-b4-HSB"/>
                 <constraint firstItem="H7U-fK-L32" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="vlo-ma-UkW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
         </view>
     </objects>
 </document>

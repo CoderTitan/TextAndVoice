@@ -14,7 +14,7 @@ class VoiceToTextController: UIViewController {
 
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var recordLabel: UILabel!
+    @IBOutlet weak var recordLabel: UITextView!
     @IBOutlet weak var speechButton: UIButton!
     
     //MARK: 录音/播放相关
@@ -107,6 +107,11 @@ class VoiceToTextController: UIViewController {
             }
             audioPlay.play()
         }
+    }
+    
+    @IBAction func labelCopClick(_ sender: Any) {
+        let pause = UIPasteboard.general
+        pause.string = recordLabel.text
     }
 }
 

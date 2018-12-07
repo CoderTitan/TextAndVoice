@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RealDataRecordController" customModule="TextAndVoice" customModuleProvider="target">
             <connections>
                 <outlet property="recordBtn" destination="GlI-H6-a9k" id="lxT-Mn-Vds"/>
-                <outlet property="textLabel" destination="2RO-WF-7L1" id="J3E-3b-nnx"/>
+                <outlet property="textLabel" destination="ZbS-KG-tei" id="8Uv-UL-iRi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -42,28 +42,39 @@
                     <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RO-WF-7L1">
-                    <rect key="frame" x="30" y="133.5" width="315" height="400"/>
-                    <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="zrg-1x-OUn"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XLz-j3-8MY">
+                    <rect key="frame" x="30" y="569" width="315" height="30"/>
+                    <color key="backgroundColor" red="0.34901960780000002" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="复制">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="labelCopClick:" destination="-1" eventType="touchUpInside" id="lNr-zD-Nbw"/>
+                        <action selector="recordAction:" destination="-1" eventType="touchUpInside" id="9lb-Rx-GRi"/>
+                    </connections>
+                </button>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZbS-KG-tei">
+                    <rect key="frame" x="30" y="115" width="315" height="414"/>
+                    <color key="backgroundColor" red="1" green="0.62840389460000001" blue="0.021082708429999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="XLz-j3-8MY" firstAttribute="leading" secondItem="GlI-H6-a9k" secondAttribute="leading" id="2SG-kk-wAN"/>
+                <constraint firstItem="ZbS-KG-tei" firstAttribute="trailing" secondItem="XLz-j3-8MY" secondAttribute="trailing" id="4WG-1t-sIX"/>
+                <constraint firstItem="ZbS-KG-tei" firstAttribute="leading" secondItem="XLz-j3-8MY" secondAttribute="leading" id="7vi-ET-Ep1"/>
                 <constraint firstItem="vM6-DW-vS8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="KRa-ke-ujB"/>
-                <constraint firstItem="2RO-WF-7L1" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="MBG-bT-CNk"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2RO-WF-7L1" secondAttribute="trailing" constant="30" id="O69-2j-UlE"/>
+                <constraint firstItem="ZbS-KG-tei" firstAttribute="top" secondItem="vM6-DW-vS8" secondAttribute="bottom" constant="40" id="MhS-Rk-64T"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GlI-H6-a9k" secondAttribute="trailing" constant="30" id="OkX-Pc-7NW"/>
                 <constraint firstItem="vM6-DW-vS8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="QYq-ty-aMa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GlI-H6-a9k" secondAttribute="bottom" constant="30" id="RWx-CS-7Ta"/>
-                <constraint firstItem="2RO-WF-7L1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="e7G-86-RRp"/>
+                <constraint firstItem="GlI-H6-a9k" firstAttribute="top" secondItem="XLz-j3-8MY" secondAttribute="bottom" constant="8" id="VvS-rj-EnT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vM6-DW-vS8" secondAttribute="trailing" constant="30" id="kcf-qI-sHB"/>
+                <constraint firstItem="XLz-j3-8MY" firstAttribute="trailing" secondItem="GlI-H6-a9k" secondAttribute="trailing" id="p7q-VK-aOH"/>
                 <constraint firstItem="GlI-H6-a9k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="qcb-Lq-Bzi"/>
+                <constraint firstItem="XLz-j3-8MY" firstAttribute="top" secondItem="ZbS-KG-tei" secondAttribute="bottom" constant="40" id="zet-wc-709"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

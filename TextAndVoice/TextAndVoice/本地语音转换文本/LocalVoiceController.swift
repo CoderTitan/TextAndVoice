@@ -12,7 +12,7 @@ import AVFoundation
 
 class LocalVoiceController: UIViewController {
 
-    @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var textLabel: UITextView!
     @IBOutlet weak var recordButton: UIButton!
     
     fileprivate var recordTask: SFSpeechRecognitionTask?///语音识别对象的结果
@@ -46,6 +46,11 @@ class LocalVoiceController: UIViewController {
         isStart ? startRecognize() : stopRecognize()
     }
     
+    
+    @IBAction func labelCopClick(_ sender: Any) {
+        let pause = UIPasteboard.general
+        pause.string = textLabel.text
+    }
 }
 
 extension LocalVoiceController{

@@ -22,6 +22,7 @@
 		47E87AAF1FEA30BA006DF756 /* RealDataRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E87AAD1FEA30BA006DF756 /* RealDataRecordController.swift */; };
 		47E87AB01FEA30BA006DF756 /* RealDataRecordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E87AAE1FEA30BA006DF756 /* RealDataRecordController.xib */; };
 		47E87AB41FEA4097006DF756 /* 再别康桥.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 47E87AB31FEA4097006DF756 /* 再别康桥.mp3 */; };
+		770060FF21BA4579001C91F6 /* VoiceTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770060FE21BA4579001C91F6 /* VoiceTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		47E87AAD1FEA30BA006DF756 /* RealDataRecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealDataRecordController.swift; sourceTree = "<group>"; };
 		47E87AAE1FEA30BA006DF756 /* RealDataRecordController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RealDataRecordController.xib; sourceTree = "<group>"; };
 		47E87AB31FEA4097006DF756 /* 再别康桥.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "再别康桥.mp3"; sourceTree = "<group>"; };
+		770060FE21BA4579001C91F6 /* VoiceTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				47E87A7A1FE7C01A006DF756 /* 语音转文字 */,
 				47E87A641FE7BA30006DF756 /* AppDelegate.swift */,
 				47E87A661FE7BA30006DF756 /* ViewController.swift */,
+				770060FE21BA4579001C91F6 /* VoiceTextView.swift */,
 				47E87A681FE7BA30006DF756 /* Main.storyboard */,
 				47E87A6E1FE7BA30006DF756 /* Assets.xcassets */,
 				47E87A701FE7BA30006DF756 /* LaunchScreen.storyboard */,
@@ -158,7 +161,7 @@
 				TargetAttributes = {
 					47E87A601FE7BA30006DF756 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -207,6 +210,7 @@
 				47E87AAB1FEA2ADE006DF756 /* LocalVoiceController.swift in Sources */,
 				47E87A7D1FE7C03E006DF756 /* TextToVoiceController.swift in Sources */,
 				47E87A811FE7C050006DF756 /* VoiceToTextController.swift in Sources */,
+				770060FF21BA4579001C91F6 /* VoiceTextView.swift in Sources */,
 				47E87A671FE7BA30006DF756 /* ViewController.swift in Sources */,
 				47E87A6D1FE7BA30006DF756 /* TextAndVoice.xcdatamodeld in Sources */,
 				47E87A651FE7BA30006DF756 /* AppDelegate.swift in Sources */,
@@ -346,12 +350,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HG8J7L5X5;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RL8C83227L;
 				INFOPLIST_FILE = TextAndVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.TextAndVoice";
+				PRODUCT_BUNDLE_IDENTIFIER = com.candylink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = candylinkHoc;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -361,12 +367,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3HG8J7L5X5;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = RL8C83227L;
 				INFOPLIST_FILE = TextAndVoice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-tian.TextAndVoice";
+				PRODUCT_BUNDLE_IDENTIFIER = com.candylink;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = candylinkHoc;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
